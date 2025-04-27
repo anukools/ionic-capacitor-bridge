@@ -13,24 +13,37 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`showFlutterView(...)`](#showflutterview)
+* [`addListener('onFlutterMessage', ...)`](#addlisteneronfluttermessage-)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### showFlutterView(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+showFlutterView(options: { message: string; }) => Promise<void>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| Param         | Type                              |
+| ------------- | --------------------------------- |
+| **`options`** | <code>{ message: string; }</code> |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+--------------------
+
+
+### addListener('onFlutterMessage', ...)
+
+```typescript
+addListener(eventName: 'onFlutterMessage', listenerFunc: (data: { message: string; }) => void) => Promise<void>
+```
+
+| Param              | Type                                                 |
+| ------------------ | ---------------------------------------------------- |
+| **`eventName`**    | <code>'onFlutterMessage'</code>                      |
+| **`listenerFunc`** | <code>(data: { message: string; }) =&gt; void</code> |
 
 --------------------
 

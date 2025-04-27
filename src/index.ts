@@ -1,10 +1,7 @@
 import { registerPlugin } from '@capacitor/core';
+import type { MyCustomBridgePlugin } from './definitions';
 
-import type { CustomBridgePlugInPlugin } from './definitions';
-
-const CustomBridgePlugIn = registerPlugin<CustomBridgePlugInPlugin>('CustomBridgePlugIn', {
-  web: () => import('./web').then((m) => new m.CustomBridgePlugInWeb()),
-});
+const MyCustomBridge = registerPlugin<MyCustomBridgePlugin>('MyCustomBridge');
 
 export * from './definitions';
-export { CustomBridgePlugIn };
+export { MyCustomBridge };

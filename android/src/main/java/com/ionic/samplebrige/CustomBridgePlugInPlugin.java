@@ -12,7 +12,7 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 @CapacitorPlugin(name = "MyCustomBridge")
 public class CustomBridgePlugInPlugin extends Plugin {
 
-    private static final String TAG = "CustomBridgePlugin";
+    private static final String TAG = "MyCustomBridge";
 
     @PluginMethod
     public void showFlutterView(PluginCall call) {
